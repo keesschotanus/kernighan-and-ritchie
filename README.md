@@ -1,4 +1,4 @@
-# Exercises to "The C programming language"
+# Solutions to "The C programming language" exercises
 
 This project contains my solution of the exercises from the book
 'The C Programming Language (second edition)' by Kernighan and Ritchie.
