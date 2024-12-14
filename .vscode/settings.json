@@ -2,5 +2,8 @@
     "cSpell.words": [
         "Kernighan",
         "Ritchie"
-    ]
+    ],
+    "files.associations": {
+        "stdio.h": "c"
+    }
 }
