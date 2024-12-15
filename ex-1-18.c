@@ -17,9 +17,10 @@ int main()
 
 	while ((len = get_line(line, MAXLINE)) > 0)
 	{
-		for (; len > 0 && (line[len - 1] == '\t' || line[len - 1] == ' ' || line[len - 1] == '\n'); --len)
-			line[len - 1] = '\0';
-		if (len > 0) 
+		// The first --len skips the string terminator
+		for (--len; len >= 0 && (line[len] == '\t' || line[len] == ' ' || line[len] == '\n'); --len)
+			line[len] = '\0';
+		if (len >= 0) 
 			printf("%s$\n", line);
 	}
 
