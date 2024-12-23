@@ -29,7 +29,7 @@ int main()
 int get_line(char s[], int lim)
 {
 	int c, i = 0, done = 0;
-	while (done != 1) {
+	while (!done) {
 		if ((c = getchar()) == EOF) {
 			done = 1;
 			s[i] = '\0';
