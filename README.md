@@ -11,6 +11,11 @@ the switch statement has not yet been taught, it is not used in the solution.
 It may be a good exercise to revisit the solutions after you consumed the
 complete book.
 
+## Note
+
+I do not own the C answer book so the solution are my own and not necessarily
+the best (or even correct for that matter).
+
 # Setup
 
 OS: Linux Mint
