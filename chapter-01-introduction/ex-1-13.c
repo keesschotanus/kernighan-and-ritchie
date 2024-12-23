@@ -19,20 +19,17 @@ main()
 		frequency[i] = 0;
 
 	while ((c = getchar()) != EOF) {
-		if (c == ' ' || c == '\n' || c == '\t') 
-		{
+		if (c == ' ' || c == '\n' || c == '\t') {
 			if (length > 0 && length < MAX_WORD_LENGTH) 
 				++frequency[length - 1];
 			length = 0;
-		} else 
-	   	{
+		} else {
 			++length;
 		}
 	}
 
 	/* Print histogram horizontally */
-	for (i = 0; i < MAX_WORD_LENGTH; ++i)
-	{
+	for (i = 0; i < MAX_WORD_LENGTH; ++i) {
 		printf("%2d | ", i + 1);
 		for (j = 0; j < frequency[i]; ++j)
 			putchar('*');

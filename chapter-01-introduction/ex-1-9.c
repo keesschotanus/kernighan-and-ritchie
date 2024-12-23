@@ -11,20 +11,16 @@ main()
 	int c;
 	int inSpace;
 
-	while ((c = getchar()) != EOF)
-	{
-		if (c == ' ')
-		{
-			if (inSpace == 0) 
-			{
+	while ((c = getchar()) != EOF) {
+		if (c == ' ') {
+			if (inSpace == 0) {
 				inSpace = 1;
 				putchar(c);
 			}
 		}
 
 		// Else has not been discussed yet
-		if (c != ' ')
-		{
+		if (c != ' ') {
 			inSpace = 0;
 			putchar(c);
 		}

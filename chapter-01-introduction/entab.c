@@ -20,8 +20,7 @@ int main()
 	char buffer[TAB_SIZE];
 	int  length = 0; // Number of characters in the buffer
 
-	while ((c = getchar()) != EOF) 
-	{
+	while ((c = getchar()) != EOF) {
     	buffer[length++] = c;
     	if (length % TAB_SIZE == 0 || c == '\n' || c == '\t') {
     		entab(buffer, length);

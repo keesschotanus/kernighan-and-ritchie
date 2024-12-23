@@ -18,10 +18,8 @@ int main()
 	char line[MAXLINE];		/* current input line */
 	char longest[MAXLINE];	/* longest line saved */
 
-	while ((len = get_line(line, MAXLINE)) > 0)
-	{
-		if (line[len - 1] != '\n')
-		{
+	while ((len = get_line(line, MAXLINE)) > 0) {
+		if (line[len - 1] != '\n') {
 			// Buffer was full, keep reading to determine actual length
 			int c;
 			while ((c = getchar()) != EOF && c != '\n')

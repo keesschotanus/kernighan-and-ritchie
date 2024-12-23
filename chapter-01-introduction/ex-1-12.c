@@ -12,13 +12,11 @@ main()
 {
 	int c, state = OUT;
 	while ((c = getchar()) != EOF) {
-		if (c == ' ' || c == '\n' || c == '\t') 
-		{
+		if (c == ' ' || c == '\n' || c == '\t') {
 			if (state == IN) 
 				putchar('\n');
 			state = OUT;
-		} else 
-	   	{
+		} else {
 			state = IN;
 			putchar(c);
 		}

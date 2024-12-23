@@ -15,8 +15,7 @@ int main()
 	int len;				/* current line length */
 	char line[MAXLINE];		/* current input line */
 
-	while ((len = get_line(line, MAXLINE)) > 0)
-	{
+	while ((len = get_line(line, MAXLINE)) > 0) {
 		reverse(line);
 		printf("%s", line);
 	}
@@ -49,8 +48,7 @@ void reverse(char line[])
 	if (end > 0 && line[end] == '\n')
 		--end; // Skip last character if it is a newline
 
-    for (start = 0; start < end; start++, --end)
-	{
+    for (start = 0; start < end; start++, --end) {
 		// Swap start char with end char
         int temp = line[start];
         line[start] = line[end];

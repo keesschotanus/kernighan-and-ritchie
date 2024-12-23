@@ -24,31 +24,25 @@ int main()
 	int space_pos = -1; // Position at which a space is found or -1
     char c;
 
-	while ((c = getchar()) != EOF) 
-	{
+	while ((c = getchar()) != EOF) {
 		if (c == ' ' || c == '\t')
 			space_pos = length;
 
 		line[length++] = c;
 
-		if (c == '\n')
-		{
+		if (c == '\n') {
 			// new-line located before we have to fold, so simply write the line
     		write(line, length);
 			length = 0;
 			space_pos = -1;			
-		} else if (length == FOLD + 1)
-		{
-			if (space_pos == -1)
-			{
+		} else if (length == FOLD + 1) {
+			if (space_pos == -1) {
 				// No space found, just break
 	    		write(line, length);
 				putchar('\n');
 				length = 0;
 				space_pos = -1;
-			}
-			else
-			{
+			} else {
 				// Break at the space we found
 				line[space_pos] = '\n';
 	    		write(line, space_pos);
@@ -61,7 +55,6 @@ int main()
 				space_pos = -1;
 			}
 		}
-
 	}
 
 	// Write what remains in the buffer

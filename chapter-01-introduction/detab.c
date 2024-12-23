@@ -12,18 +12,14 @@
 int main() 
 {
 	int c, position = 0;
-	while ((c = getchar()) != EOF) 
-	{
+	while ((c = getchar()) != EOF) {
 		++position;
-		if (c == '\n')
-		{
+		if (c == '\n') {
 			putchar(c);
 			position = 0;
-		} else if (c == '\t')
-		{
+		} else if (c == '\t') {
 			putchar(' ');
-			while (position % TAB_SIZE)
-			{
+			while (position % TAB_SIZE) {
 				putchar(' ');
 				++position;
 			}

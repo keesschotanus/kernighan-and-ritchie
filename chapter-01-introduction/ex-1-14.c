@@ -17,8 +17,7 @@ int main()
 	while ((c = getchar()) != EOF) 
 		++frequency[c];
 
-	for (i = 0; i < MAX_CHARS; ++i)
-	{
+	for (i = 0; i < MAX_CHARS; ++i) {
 		if (i > 32)
 			printf("  %c | ", i); // Print printable characters as char
 		else

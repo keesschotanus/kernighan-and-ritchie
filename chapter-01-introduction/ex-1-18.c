@@ -15,8 +15,7 @@ int main()
 	int len;				/* current line length */
 	char line[MAXLINE];		/* current input line */
 
-	while ((len = get_line(line, MAXLINE)) > 0)
-	{
+	while ((len = get_line(line, MAXLINE)) > 0) {
 		// The first --len skips the string terminator
 		for (--len; len >= 0 && (line[len] == '\t' || line[len] == ' ' || line[len] == '\n'); --len)
 			line[len] = '\0';

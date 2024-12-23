@@ -16,10 +16,8 @@ int main()
 	char line[MAXLINE];		/* current input line */
 
 	max = 0;
-	while ((len = get_line(line, MAXLINE)) > 0)
-	{
-		if (line[len - 1] != '\n')
-		{
+	while ((len = get_line(line, MAXLINE)) > 0) {
+		if (line[len - 1] != '\n') {
 			printf("%s", line);
 			int c;
 			while((c = getchar()) != EOF && c != '\n')

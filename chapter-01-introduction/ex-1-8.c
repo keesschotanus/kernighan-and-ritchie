@@ -13,8 +13,7 @@ main()
 	tabs = 0;
 	nl = 0;
 
-	while ((c = getchar()) != EOF)
-	{
+	while ((c = getchar()) != EOF) {
 		if (c == '\n')
 			++nl;
 		if (c == '\t')
