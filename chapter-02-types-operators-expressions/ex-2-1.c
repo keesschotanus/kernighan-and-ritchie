@@ -1,3 +1,12 @@
+/*
+ * Exercise 2-1
+ * Write a program to determine the ranges of char, short, int, and long
+ * variables, both signed and unsigned, by printing appropriate values from
+ * standard headers and by direct computation.
+ * 
+ * I did not do the direct computation part.
+ */
+
 #include <float.h>
 #include <limits.h>
 #include <stdio.h>
