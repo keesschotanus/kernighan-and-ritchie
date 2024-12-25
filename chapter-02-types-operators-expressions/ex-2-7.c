@@ -20,6 +20,11 @@
  * 10110100 ^
  * --------
  * 10101000 = 168
+ * 
+ * 
+ * I came up with this solution:
+ * return ((x & ~(~(~0U << n) << (p+1-n)))) | ((~((x >> (p - n + 1)) & (~(~0U << n))) & (~(~0U << n))) << (p - n + 1));
+ * Where Ollama reduced it to: return x ^ (((1 << n) - 1) << (p - n + 1));
  */
 	
 #include <stdio.h>

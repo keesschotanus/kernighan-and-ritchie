@@ -13,7 +13,7 @@ complete book.
 
 ## Note
 
-I do not own the C answer book so the solution are my own and not necessarily
+I do not own the C answer book so the solutions are my own and not necessarily
 the best (or even correct for that matter).
 
 # Setup
