@@ -41,5 +41,5 @@ int main()
 
 int setbits(unsigned x, unsigned p, unsigned n, unsigned y)
 {
- 	return (x & ~(~((unsigned)~0 << n) << (p+1-n))) | ((y & ~((unsigned)~0 << n)) << (p+1-n));
+ 	return (x & ~(~(~0U << n) << (p+1-n))) | ((y & ~(~0U << n)) << (p+1-n));
 }
