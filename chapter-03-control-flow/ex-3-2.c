@@ -35,7 +35,8 @@ int main()
  * Tab characters for example are replaced with \t
  */
 void escape(char s[], char t[])
-{   int j = 0;
+{   
+    int j = 0;
     for (int i = 0; s[i]; ++i) {
         switch (s[i]) {
         case '\n':
