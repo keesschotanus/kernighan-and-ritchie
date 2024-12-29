@@ -3,7 +3,8 @@
  * Add commands to print the top element of the stack without popping,
  * to duplicate it, and to swap the top two elements.
  * 
- * The new commands are 'p' for print, 'd' for duplicate and 's' for swap.
+ * The new commands are 'p' for print, 'd' for duplicate, 's' for swap
+ * and 'c' to clear the stack.
  */
 
 #include <stdio.h>
@@ -16,6 +17,7 @@ int getop(char []);
 void push(double);
 double pop(void);
 double peek(void);
+void clear_stack(void);
 
 int main()
 {
@@ -67,6 +69,9 @@ int main()
         case 'd': // duplicate
             push(peek());
             break;
+        case 'c': // clear stack
+            clear_stack();
+            break;
         default:
             printf("error: unknown command %s\n", s);
             break;
@@ -107,6 +112,11 @@ double peek(void)
         printf("error: stack empty\n");
         return 0.0;
     }
+}
+
+void clear_stack(void)
+{
+    sp = 0;
 }
 
 #include <ctype.h>
