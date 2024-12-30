@@ -152,12 +152,13 @@ int getop(char s[])
 	while ((s[0] = c = getch()) == ' ' || c == '\t')
         ;
 
+    // Currently using single letters for commands like 'd' for duplicate
     if (isalpha(c) && c != '.' && c != '-') {
         while (isalpha(s[++i] = c = getch()))
             ;
         s[i] = '\0';
 		ungetch(c);
-	    return FUNCTION;
+	    return strlen(s) == 1 ? s[0] : FUNCTION;
 	}
 
     if (!isdigit(c) && c != '.' && c != '-') {
