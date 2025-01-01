@@ -196,7 +196,7 @@ int getop(char s[])
 	if (c == '-') {
 		if (!isdigit(c = getch())) {
 			// Assume '-' followed by non-digit is minus operator
-			// `2 3 -` works since - i followed by non-digit ('\n')
+			// `2 3 -` works since - is followed by non-digit ('\n')
 			s[1] = '\0';
 			ungetch(c);
 			return s[0];
