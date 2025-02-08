@@ -14,8 +14,8 @@ int stringcmp(const void *left, const void *right);
 
 int main(int argc, char *argv[])
 {
-	size_t nlines;
 	int numeric = argc > 1 && strcmp(argv[1], "-n") == 0 ? 1 : 0;
+	size_t nlines;
 	if ((nlines = readlines(lineptr, MAXLINES)) >= 0)
 	{
 		qsort(lineptr, nlines, sizeof(char *), numeric ? numcmp : stringcmp);
